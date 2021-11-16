@@ -28,7 +28,7 @@ BASE_APPS = [
 ]
 
 LOCAL_APPS = [
-
+    'apps.users',
 ]
 
 THIRD_APPS = [
@@ -36,6 +36,10 @@ THIRD_APPS = [
 ]
 
 INSTALLED_APPS = BASE_APPS + LOCAL_APPS + THIRD_APPS
+
+#esto es para decirle que modelos de usuarios va a utilizar por defecto
+AUTH_USER_MODEL = 'users.User'
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
